@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='utf-8'>
+<title>Teck-Teckコンサルティング</title>
+</head>
+<body>
+<p class="btn_design"><span>btn</span></p>
+
+<style>
+body{width:100%}
+
+p.btn_design{
+ font-size:28px;
+ width:150px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:40px;
+ text-align:center;
+ font-weigt:bold;
+ padding:20px 15px;
+ background-color:#000000;
+ color:#FFF;
+ border-radius:4px;
+ -webkit-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ box-sizing:border-box;
+ cursor:pointer;
+}
+
+p.btn_design span{
+ display:inline-block;
+ transition: .5s
+}
+
+p.btn_design:hover span{
+ transform:rotateX(360deg);
+ 
+
+
+
+
+}
+
+body{
+ background-image:linear-gradient(#F15F79,#B24592);
+}
+
+
+</style>
+
+
+
+
+
+
+<div class="box3">
+<p>aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaa</p></div>
+
+<style>
+.box3{
+ height:100px;
+ width:100px;
+ padding:0.5px 1px;
+ margin: 2px;
+ color:#2c2c2f;
+ background-color:#cde4ff;
+}
+.box3,p{
+ margin:0;
+ padding:0;
+} 
+</style>
+
+<table border="1px"><tr><td>テスト表 テスト　テスト　テスト</td></tr></table>
+
+<p class="btn_design2">btn</p>
+<style>
+body{100%;
+}
+
+.btn_design2{
+ font-size:28px;
+ width:150px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:40px;
+ text-align:center;
+ font-weight:bold;
+ padding:20px 15px;
+ background-color:#fffffff;
+ color:#000000;
+ border:#000000 solid 2px;
+ border-bottom:8px solid #000000;
+ border-radius:5px;
+ -webkit-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ box-sizing:border-box;
+ transition:0.2s;
+}
+
+.btn_design2:hover{
+ border-bottom:none;
+ transform:translateY(5px);
+ border:#000000 solid 2px;
+ cursur:pointer;
+}
+
+
+</style>
+
+
+
+<input id="menu-cb" type="checkbox" value="off">
+<label id="menu-icon" for="menu-cb">=</label>
+<label id="menu-background" for="menu-cb"></label>
+<div id="ham-menu">
+<ul>
+<li>メニュー１</li>
+<li>メニュー２</li>
+<li>メニュー３</li>
+</ul>
+</div>
+
+<style>
+#ham-menu{
+background-color:#fff;
+box-sizing:border-box;
+height:100%;
+padding:10px 40px;
+position:fixed;
+right:-300px;
+top:0;
+transition:transform 0.3s linear 0s;
+width:300px;
+z-index:1000;
+}
+
+#menu-background{
+ background-color:#333;
+ display:block;
+ height:100%;
+ opacity:0;
+ position:fixed;
+ right:0;
+ top:0;
+ transition: all 0.3s linear 0s;
+ width:100%;
+ z-index:-1;
+}
+
+#menu-icon{
+background-color:#fff;
+border-radius: 0 0 0 10px;
+color:#333;
+cursor:pointer;
+display:block;
+font-size:50px;
+height:50px;
+linear-height:50px;
+position:fixed;
+right:0;
+text-align:center;
+top:0;
+width:50px;
+transition: all 0.3s linear 0s;
+z-index:1000;
+}
+
+#menu-cb{
+display:none;
+}
+#menu-cb:checked~#ham-menu,
+#menu-cb:checked~#menu-icon{
+ transform:
+ translate(-300px);
+}
+#menu-cb:checked~#menu-background{
+ opacity:0.5;
+ z-index:999;
+}
+
+</style>
+
+
+
+
+
+<div id="message1" style="position:absolute; left:10px; top:10px">
+選択の相手は？
+</div>
+<div id="message2" style="position:absolute; left:10px; top:40px">
+勝敗の結果は？
+</div>
+<form style="position:absolute; left:10px; top:70px">
+あまたの選択は？
+<select id="mySelect">
+<option>グー</option>
+<option>チョキ</option>
+<option>パー</option>
+</select>
+<input type="button" value="決定" onclick= "myGame">
+</form>
+
+<script type="text/javascript">
+function myGame(){
+myNumber=document.getElementById("mySelect").selectedIndex;
+hisNumber=Math.floor(Math.random()*3);
+
+if(hisNumber==0){
+hisHand="グー";
+}
+if(hisNumber==1){
+hisHand="チョキ";
+}
+if(hisNumber==2){
+hisHand="パー";
+}
+
+if(myNumber-hisNumber==-2){
+judge="あなたの負け";
+}
+if(myNumber-hisNumber==-1){
+judge="あなたの勝ち";
+}
+if(myNumber-hisNumber==0){
+judge="引き分け";
+}
+if(myNumber-hisNumber==1){
+judge="あなたの負け";
+}
+if(myNumber-hisNumber==2){
+judge="あなたの勝ち";
+}
+document.getElementById("message1").innerHTML=hisHand;
+document.getElementById("message2").innerHTML=judge;
+}
+</script>
+
+
+
+
+<p class="btn_design3">btn</p>
+
+<style>
+body{width:100%}
+.btn_design3{
+ font-size:28px;
+ width:150px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:40px;
+ text-align:center;
+ font-weight:bold;
+ padding: 20px 15px;
+ background-color:#000000;
+ color:#ffffff;
+ position:relative;
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box;
+ cursor:pointer;<!--カーソルの形状。waitなら、時計型-->
+}
+.btn_design3:after{
+ background:#fff;
+ content:"";
+ height:200px;
+ left:-90px;
+ opacity:.2;
+ position:absolute;
+ top:-63px;
+ -webkit-transform:rorate(41deg);
+ transform:rotate(41deg);
+ -webkit-transition:all 350ms
+   cubic-bezier(0.19,1,0.22,1);
+ transition:all 350ms
+  cubic-bezier(0.19,1,0.22,1);
+ width:50px;
+ z-index:1;
+}
+
+.btn_design3:hover:after{
+ left:120%;
+ -webkit-transition:all 350ms
+ cubic-bezier(0.19,1,0.22,1);
+ transition:all 350ms
+ cubic-bezier(0.19,1,0.22,1);
+}
+
+</style>
+
+<p class="btn_design4">btn</p>
+
+<style>
+body{width:100%;}
+
+.btn_design4{
+ font-size:28px;
+ width:150px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:40px;
+ text-align:center;
+ font-weight:bold;
+ padding:20px 15px;
+ color:#000000;
+ border:2px solid #000000;
+ -webkit-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ box-sizing:border-box;
+ -webkit-transition:all .1s;
+ transition:all .1s;
+}
+
+.btn_design4:hover{
+ background-color:transparent;
+ border:2px solid #ff0000;
+ color:#ff0000;
+ cursor:wait;
+}
+
+</style>
+
+
+<p class="btn_design5">btn</p>
+<style>
+body{width:100%;}
+
+.btn_design5{
+ font-size:28px;
+ width:150px;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:40px;
+ text-align:center;
+ font-weight:bold;
+ padding:20px 15px;
+ color:#000000;
+ -webkit-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ box-sizing:border-box;
+ -webkit-transition:all 0.7s ease-out;
+ transition:all 0.7s ease-out;
+ background:-webkit-linear-gradient(180deg,#000000,
+ #ffffff,
+ #868686,
+ #3d3d3d);
+ background:linear-gradient(270deg,
+ #000000,
+ #000000,
+ #ffffff,
+ #ffffff);
+ background-position:1% 50%;
+ background-size:300% 300%;
+ border:none;
+ border:2px solid #050505;
+}
+
+.btn_design5:hover{
+ background-position:99% 50%;
+ color:#ffffff;
+ border:2px solid #000000;
+ cursor:pointer;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
